@@ -11,8 +11,13 @@ export default function Home() {
         <title>VRGO - Realidade Virtual</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <header className={styles.header}>
+      <header className={styles.header}>
+        <div className={styles.header_nav_first}>
+          <a href="#">
+            <h4>LOGO</h4>
+          </a>
+        </div>
+        <div className={styles.header_nav_second}>
           <a href="#" className={tooltip.tooltip}>
             <h4>Produto</h4>
             <span className={tooltip.tooltiptext}>O que vendemos, tudo sobre nosso produto.</span>
@@ -27,16 +32,20 @@ export default function Home() {
             <h4>Contato</h4>
             <span className={tooltip.tooltiptext}>Onde nos encontrar.</span>
           </a>
-          
-        </header>
+          </div>
+        <div className={styles.header_nav_third}>
+        <a href="#">
+            <h4>SOCIAL?</h4>
+          </a>
+        </div>
+      </header>
+      <main className={styles.main}>
+        
         <h1 className={styles.title}>VRGO</h1>
         <h1 className={styles.description}>Realidade Virtual</h1>
 
         
       </main>
-
-      <footer className={styles.footer}>
-      </footer>
     </div>
   )
 }

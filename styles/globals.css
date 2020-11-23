@@ -4,7 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, Roboto Slab, BlinkMacSystemFont, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  color: #e8fccf;
+  color: #ffffff;
 }
 
 a {
@@ -14,4 +14,6 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
