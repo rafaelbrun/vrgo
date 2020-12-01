@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet" />
         <title>VRGO - Realidade Virtual</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -32,19 +32,30 @@ export default function Home() {
             <h4>Contato</h4>
             <span className={tooltip.tooltiptext}>Onde nos encontrar.</span>
           </a>
-          </div>
+        </div>
         <div className={styles.header_nav_third}>
-        <a href="#">
+          <a href="#">
             <h4>SOCIAL?</h4>
           </a>
         </div>
       </header>
       <main className={styles.main}>
-        
+
         <h1 className={styles.title}>VRGO</h1>
         <h1 className={styles.description}>Realidade Virtual</h1>
 
-        
+        <div className={styles.div_divisor} >
+          <div className={styles.divisor_line} />
+          <div className={styles.divisor_dot} />
+          <div className={styles.divisor_line} />
+        </div>
+        <iframe className={styles.video_div} src="https://www.youtube.com/embed/tgbNymZ7vqY"/>
+        <div className={styles.div_divisor} >
+          <div className={styles.divisor_line} />
+          <div className={styles.divisor_dot} />
+          <div className={styles.divisor_line} />
+        </div>
+
       </main>
     </div>
   )

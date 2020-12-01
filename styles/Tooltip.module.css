@@ -5,7 +5,7 @@
   
   .tooltip .tooltiptext {
     visibility: hidden;
-    background-color: #1A5E63;
+    background-color: hsl(184, 58%, 25%, 0.8);
     color: #fff;
     width: 400px;
     top: 100%;
