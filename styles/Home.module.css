@@ -1,11 +1,8 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
   display: flex;
-  background-color: #1A5E63;
+  background-color:#1A5E63;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  height: 100vh;
 }
 
 .header {
@@ -17,10 +14,12 @@
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
+  font-size: 1.5rem;
 }
 
 .header_nav_first {
   margin: 0;
+  padding: 0 0.5rem;
 }
 
 .header_nav_second {
@@ -42,11 +41,11 @@
 
 .header_nav_third {
   margin: 0;
+  padding: 0 0.5rem;
 }
 
 .main {
   margin-top: 2rem;
-  padding: 0 0 5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -54,17 +53,17 @@
 }
 
 .title {
-  font-size: 5rem;
+  font-size: 7rem;
   margin: 1rem 0 0 0;
   line-height: 1.15;
   font-family: Goldman;
-  text-align: center;
   animation: transitionIn 2s;
 }
 
 .description {
   margin: 0;
   animation: transitionIn 2s;
+  font-size: 3rem;
 }
 
 @keyframes transitionIn {
@@ -107,6 +106,38 @@
   height: 472px;
 }
 
+.div_produto {
+  align-items: center;
+}
 
+.div_vrgo {
+  align-items: center;
+}
 
+.div_contato {
+  align-self: center;
+}
+@media (max-width: 680px){
+  .header {
+    padding: 0.5rem 6rem;
+  }
+  .video_div {
+    width: 378px;
+    height: 283px;
+  }
+}
 
+@media (max-width: 420px){
+  .header {
+    padding: 0.5rem 4rem;
+  }
+  .video_div {
+    width: 226px;
+    height: 169px;
+  }
+  .divisor_line {
+    width: 60px;
+  }
+}
+
+/**/
