@@ -3,7 +3,8 @@ body {
   font-family: -apple-system, Roboto Slab, BlinkMacSystemFont, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: #ffffff;
-  background-color: #1A5E63;
+  background: url('../public/assets/background.png') no-repeat;
+  background-size: 100%;
 }
 
 html {
@@ -31,8 +32,13 @@ iframe {
     font-size: 55%;
   }
 }
-@media (max-width: 420px){
+@media (max-width: 430px){
   html {
     font-size: 40%;
+  }
+}
+@media (max-width: 315px){
+  html {
+    font-size: 35%;
   }
 }

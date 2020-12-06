@@ -3,7 +3,6 @@ import styles from '../styles/Home.module.css'
 import tooltip from '../styles/Tooltip.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -49,14 +48,10 @@ export default function Home() {
         <h1 className={styles.title}>VRGO</h1>
         <h1 className={styles.description}>Realidade Virtual</h1>
 
-        <div className={styles.div_divisor} >
-          <div className={styles.divisor_line} />
-          <div className={styles.divisor_dot} />
-          <div className={styles.divisor_line} />
-        </div>
-        <iframe className={styles.video_div} src="https://www.youtube.com/embed/tgbNymZ7vqY" />
-        <div className={styles.div_divs_infos}>
-          <div className={styles.div_produto} id="produto">
+        
+        <div className={styles.div_divs_infos} id="produto">
+          <div className={styles.div_produto} >
+            <iframe className={styles.video_div} src="https://www.youtube.com/embed/tgbNymZ7vqY" />
             <h1>PRODUTO</h1>
             <p>Tudo sobre o que fazemos</p>
           </div>
