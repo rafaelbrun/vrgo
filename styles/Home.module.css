@@ -54,7 +54,6 @@
   align-items: center;
 }
 
-
 .title {
   font-size: 7rem;
   opacity: 0;
@@ -62,7 +61,7 @@
   line-height: 1.15;
   font-family: Goldman;
   animation: transitionIn 2s;
-  animation-fill-mode: forwards;  
+  animation-fill-mode: forwards;
   animation-delay: 500ms;
 }
 
@@ -70,7 +69,7 @@
   opacity: 0;
   margin: 0;
   animation: transitionIn 2s;
-  animation-fill-mode: forwards;  
+  animation-fill-mode: forwards;
   font-size: 3rem;
   animation-delay: 500ms;
 }
@@ -115,7 +114,7 @@
   height: 472px;
 }
 
-.div_contato_imagem{
+.div_contato_imagem {
   border-radius: 6px;
 }
 
@@ -142,7 +141,6 @@
   align-items: center;
   font-size: 2rem;
   padding: 0 10%;
-  
 }
 
 .div_divs_infos h1 {
@@ -164,8 +162,12 @@
   font-size: 1.5rem;
 }
 
+.footer p {
+  font-size: 2.5rem;
+}
+
 .footer_first, .footer_sec, .footer_thirdy {
-  padding: 4rem;
+  padding: 1rem;
 }
 
 .footer_first {
@@ -181,12 +183,13 @@
 .footer_thirdy {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;  
+  align-items: flex-end;
 }
 
 .footer_thirdy p {
   margin-right: 10%;
 }
+
 .footer_first a:hover, .footer_sec a:hover {
   opacity: 0.6;
   transition: 0.4s;
@@ -219,14 +222,14 @@
   padding: 0 12px;
 }
 
-@media (max-width: 1100px){
+@media (max-width: 1100px) {
   .div_infos_image {
     flex-direction: column;
   }
-  .div_infos_image p{
+  
+  .div_infos_image p {
     margin: 3rem 0;
   }
-  
 }
 
 @media (max-width: 680px) {
@@ -239,10 +242,28 @@
   }
 }
 
-@media (max-width: 420px){
-  .video_div {
-    width: 226px;
-    height: 169px;
+@media (max-width: 550px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    height: 240px;
+  }
+  .footer_first, .footer_sec, .footer_thirdy {
+    margin: 10px 0;
+    padding: 0;
+  }
+  .footer_first {
+    margin-top: 12px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer_thirdy {
+    align-items: center;
+  }
+  .footer_thirdy p {
+    margin-right: 0;
   }
 }
 
@@ -253,20 +274,27 @@
   .divisor_line {
     width: 60px;
   }
+}
+
+@media (max-width: 430px) {
+  .video_div {
+    width: 226px;
+    height: 169px;
+  }
   .footer {
-    display: flex;
-    flex-direction: column;
+    height: 200px;
   }
-  .footer_first, .footer_sec, .footer_thirdy {
-    margin: 0;
-    padding: 0;
-  }
-  .footer_first {
-    margin-top: 12px;
-    align-items: center;
-    display: flex;
+  .footer_footer {
     flex-direction: column;
+    height: 40px;
+  }
+  .footer_footer p {
+    padding: 4px 0;
   }
 }
 
-/**/
+@media (max-width: 315px){
+  .footer {
+    height: 180px;
+  }
+}
