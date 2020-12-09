@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import tooltip from '../styles/Tooltip.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -37,8 +38,8 @@ export default function Home() {
           </a>
         </div>
         <div className={styles.header_nav_third}>
-        <a href="#contato" className={tooltip.tooltip}>
-        <FontAwesomeIcon icon={["far", "question-circle"]} className={styles.icons} />
+          <a href="#contato" className={tooltip.tooltip}>
+            <FontAwesomeIcon icon={["far", "question-circle"]} className={styles.icons} />
             <span className={tooltip.tooltiptext}>Tem alguma dúvida?</span>
           </a>
         </div>
@@ -48,20 +49,29 @@ export default function Home() {
         <h1 className={styles.title}>VRGO</h1>
         <h1 className={styles.description}>Realidade Virtual</h1>
 
-        
-        <div className={styles.div_divs_infos} id="produto">
-          <div className={styles.div_produto} >
+
+        <div className={styles.div_divs_infos} >
+          <div className={styles.div_produto} id="produto">
             <iframe className={styles.video_div} src="https://www.youtube.com/embed/tgbNymZ7vqY" />
             <h1>PRODUTO</h1>
-            <p>Tudo sobre o que fazemos</p>
+            <div className={styles.div_infos_image}>
+              <Image src="/image1.png" width={4000} height={3000} quality={100} className={styles.div_contato_imagem}/>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>
           </div>
           <div className={styles.div_vrgo} id="vrgo">
             <h1>VRGO</h1>
-            <p>Tudo sobre nossa empresa</p>
+            <div className={styles.div_infos_image}>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <Image src="/image1.png" width={4000} height={3000} quality={100} className={styles.div_contato_imagem} />
+            </div>
           </div>
           <div className={styles.div_contato} id="contato">
             <h1>CONTATO</h1>
-            <p>Como nos contatar</p>
+            <div className={styles.div_infos_image}>
+              <Image src="/image1.png" width={4000} height={3000} quality={100} className={styles.div_contato_imagem}/>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>
           </div>
         </div>
 

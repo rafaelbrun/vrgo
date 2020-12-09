@@ -5,18 +5,18 @@
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  background-color: #06084291;
+  background-color: #060842e1;
   color: #fff;
-  width: 400px;
+  width: 450px;
   top: 100%;
   left: 50%;
-  margin-left: -200px;
+  margin-left: -225px;
   margin-top: 20px;
   text-align: center;
-  padding: 5px 0;
+  padding: 10px 0;
   border-radius: 6px;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
 }
 
 .tooltip:active {
@@ -29,6 +29,7 @@
 
 .tooltip .tooltiptext::after {
   content: " ";
+  backdrop-filter: blur(3px);
   position: absolute;
   bottom: 100%;
   left: 50%;
