@@ -10,6 +10,7 @@ body {
 html {
   font-size: 62.5%;
   letter-spacing: 2.5px;
+  background-color: black;
 }
 
 a {

@@ -117,7 +117,6 @@
 
 .div_contato_imagem{
   border-radius: 6px;
-  z-index: -1;
 }
 
 .div_divs_infos {
@@ -142,7 +141,7 @@
   flex-direction: row;
   align-items: center;
   font-size: 2rem;
-  padding: 0 40rem;
+  padding: 0 10%;
   
 }
 
@@ -153,6 +152,7 @@
 
 .div_divs_infos p {
   padding: 0 2rem;
+  max-width: 600px;
 }
 
 .footer {
@@ -197,8 +197,6 @@
   margin: 0.5rem;
 }
 
-
-
 .div_contato_icon {
   display: flex;
   justify-content: center;
@@ -221,6 +219,16 @@
   padding: 0 12px;
 }
 
+@media (max-width: 1100px){
+  .div_infos_image {
+    flex-direction: column;
+  }
+  .div_infos_image p{
+    margin: 3rem 0;
+  }
+  
+}
+
 @media (max-width: 680px) {
   .header {
     padding: 0.5rem 6rem;
@@ -238,7 +246,7 @@
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .header {
     padding: 0.5rem 4rem;
   }

@@ -55,7 +55,7 @@ export default function Home() {
             <iframe className={styles.video_div} src="https://www.youtube.com/embed/tgbNymZ7vqY" />
             <h1>PRODUTO</h1>
             <div className={styles.div_infos_image}>
-              <Image src="/image1.png" width={4000} height={3000} quality={100} className={styles.div_contato_imagem}/>
+              <Image src="/image1.png" width={1000} height={666} quality={100} className={styles.div_contato_imagem} />
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
             </div>
           </div>
@@ -63,13 +63,13 @@ export default function Home() {
             <h1>VRGO</h1>
             <div className={styles.div_infos_image}>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-              <Image src="/image1.png" width={4000} height={3000} quality={100} className={styles.div_contato_imagem} />
+              <Image src="/image1.png" width={1000} height={666} quality={100} className={styles.div_contato_imagem} />
             </div>
           </div>
           <div className={styles.div_contato} id="contato">
             <h1>CONTATO</h1>
             <div className={styles.div_infos_image}>
-              <Image src="/image1.png" width={4000} height={3000} quality={100} className={styles.div_contato_imagem}/>
+              <Image src="/image1.png" width={1000} height={666} quality={100} className={styles.div_contato_imagem} />
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
             </div>
           </div>
