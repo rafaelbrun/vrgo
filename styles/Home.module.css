@@ -109,17 +109,13 @@
 }
 
 .video_div {
-  margin: 1rem 0;
+  margin: 5rem 0;
   width: 630px;
   height: 472px;
 }
 
 .div_contato_imagem {
   border-radius: 6px;
-}
-
-.div_divs_infos {
-  margin-top: 40%;
 }
 
 .div_produto, .div_vrgo, .div_contato, .div_divs_infos {
@@ -131,8 +127,12 @@
   word-spacing: 4.5px;
 }
 
+.div_divs_infos {
+  margin-top: 45%;
+}
+
 .div_produto {
-  margin-top: 40%;
+  margin: 0;
 }
 
 .div_infos_image {
@@ -146,6 +146,7 @@
 .div_divs_infos h1 {
   font-size: 4rem;
   padding: 1.2rem 0;
+  margin: 2.5rem 0;
 }
 
 .div_divs_infos p {
