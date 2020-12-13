@@ -8,9 +8,9 @@ import { text } from '@fortawesome/fontawesome-svg-core';
 
 export default function Home() {
   React.useEffect(() => {
-    var scroll = window.requestAnimationFrame || function(callback) {window.setTimeout(callback,1000/60)};
+    var scroll = window.requestAnimationFrame || function (callback) { window.setTimeout(callback, 1000 / 60) };
 
-    function loop(){
+    function loop() {
       var imageProduto = document.getElementById("imageProduto");
       var textProduto = document.getElementById("textProduto");
       var imageVRGO = document.getElementById("imageVRGO");
@@ -18,30 +18,30 @@ export default function Home() {
       var imageContato = document.getElementById("imageContato");
       var textContato = document.getElementById("textContato");
 
-      if(window.pageYOffset > 620){
-       imageProduto.classList.add(styles.is_visible); 
-       textProduto.classList.add(styles.is_visibleOposto);
+      if (isElementInView(imageProduto)) {
+        imageProduto.classList.add(styles.is_visible);
+        textProduto.classList.add(styles.is_visibleOposto);
       }
-      else if(window.pageYOffset < 620){
-        imageProduto.classList.remove(styles.is_visible); 
+      else {
+        imageProduto.classList.remove(styles.is_visible);
         textProduto.classList.remove(styles.is_visibleOposto);
       }
 
-      if(window.pageYOffset > 1300){
-        imageVRGO.classList.add(styles.is_visibleOposto); 
+      if (isElementInView(imageVRGO)) {
+        imageVRGO.classList.add(styles.is_visibleOposto);
         textVRGO.classList.add(styles.is_visible);
       }
-      else if(window.pageYOffset < 1300){
-        imageVRGO.classList.remove(styles.is_visibleOposto); 
+      else {
+        imageVRGO.classList.remove(styles.is_visibleOposto);
         textVRGO.classList.remove(styles.is_visible);
       }
 
-      if(window.pageYOffset > 2070){
-        imageContato.classList.add(styles.is_visible); 
+      if (isElementInView(imageContato)) {
+        imageContato.classList.add(styles.is_visible);
         textContato.classList.add(styles.is_visibleOposto);
       }
-      else if(window.pageYOffset < 2070){
-        imageContato.classList.remove(styles.is_visible); 
+      else {
+        imageContato.classList.remove(styles.is_visible);
         textContato.classList.remove(styles.is_visibleOposto);
       }
 
@@ -49,7 +49,15 @@ export default function Home() {
     }
     loop();
   });
-  
+
+  function isElementInView(element: HTMLElement) {
+    var rect = element.getBoundingClientRect();
+
+    return ((rect.top <= 0 && rect.bottom >= 0) || (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+      || (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)));
+
+  }
 
   return (
     <div className={styles.container}>
@@ -97,11 +105,12 @@ export default function Home() {
 
 
         <div className={styles.div_divs_infos} >
+        <iframe className={styles.video_div} src="https://www.youtube.com/embed/tgbNymZ7vqY" />
           <div className={styles.div_produto} id="produto">
-            <iframe className={styles.video_div} src="https://www.youtube.com/embed/tgbNymZ7vqY" />
-            <h1>PRODUTO</h1>
+            
+            <h1 >PRODUTO</h1>
             <div className={styles.div_infos_image}>
-              <Image id="imageProduto" src="/image1.png" width={1000} height={666} quality={100} className={styles.div_contato_imagem +" "+ styles.show_on_scroll} />
+              <Image id="imageProduto" src="/image1.png" width={1000} height={666} quality={100} className={styles.div_contato_imagem + " " + styles.show_on_scroll} />
               <p id="textProduto" className={styles.div_info_descricao}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
             </div>
           </div>
@@ -109,13 +118,13 @@ export default function Home() {
             <h1>VRGO</h1>
             <div className={styles.div_infos_image}>
               <p id="textVRGO" className={styles.div_info_descricao}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-              <Image id="imageVRGO" src="/image1.png" width={1000} height={666} quality={100} className={styles.div_contato_imagem +" "+ styles.show_on_scroll} />
+              <Image id="imageVRGO" src="/image1.png" width={1000} height={666} quality={100} className={styles.div_contato_imagem + " " + styles.show_on_scroll} />
             </div>
           </div>
           <div className={styles.div_contato} id="contato">
             <h1>CONTATO</h1>
             <div className={styles.div_infos_image}>
-              <Image id="imageContato" src="/image1.png" width={1000} height={666} quality={100} className={styles.div_contato_imagem +" "+ styles.show_on_scroll} />
+              <Image id="imageContato" src="/image1.png" width={1000} height={666} quality={100} className={styles.div_contato_imagem + " " + styles.show_on_scroll} />
               <p id="textContato" className={styles.div_info_descricao}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
             </div>
           </div>
