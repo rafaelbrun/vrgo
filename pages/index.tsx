@@ -1,10 +1,56 @@
+import React from 'react';
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import tooltip from '../styles/Tooltip.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from 'next/image'
+import { text } from '@fortawesome/fontawesome-svg-core';
 
 export default function Home() {
+  React.useEffect(() => {
+    var scroll = window.requestAnimationFrame || function(callback) {window.setTimeout(callback,1000/60)};
+
+    function loop(){
+      var imageProduto = document.getElementById("imageProduto");
+      var textProduto = document.getElementById("textProduto");
+      var imageVRGO = document.getElementById("imageVRGO");
+      var textVRGO = document.getElementById("textVRGO");
+      var imageContato = document.getElementById("imageContato");
+      var textContato = document.getElementById("textContato");
+
+      if(window.pageYOffset > 620){
+       imageProduto.classList.add(styles.is_visible); 
+       textProduto.classList.add(styles.is_visibleOposto);
+      }
+      else if(window.pageYOffset < 620){
+        imageProduto.classList.remove(styles.is_visible); 
+        textProduto.classList.remove(styles.is_visibleOposto);
+      }
+
+      if(window.pageYOffset > 1300){
+        imageVRGO.classList.add(styles.is_visibleOposto); 
+        textVRGO.classList.add(styles.is_visible);
+      }
+      else if(window.pageYOffset < 1300){
+        imageVRGO.classList.remove(styles.is_visibleOposto); 
+        textVRGO.classList.remove(styles.is_visible);
+      }
+
+      if(window.pageYOffset > 2070){
+        imageContato.classList.add(styles.is_visible); 
+        textContato.classList.add(styles.is_visibleOposto);
+      }
+      else if(window.pageYOffset < 2070){
+        imageContato.classList.remove(styles.is_visible); 
+        textContato.classList.remove(styles.is_visibleOposto);
+      }
+
+      scroll(loop);
+    }
+    loop();
+  });
+  
+
   return (
     <div className={styles.container}>
       <Head>
@@ -44,7 +90,7 @@ export default function Home() {
           </a>
         </div>
       </header>
-      <main className={styles.main}>
+      <main className={styles.main} id="main">
 
         <h1 className={styles.title}>VRGO</h1>
         <h1 className={styles.description}>Realidade Virtual</h1>
@@ -55,22 +101,22 @@ export default function Home() {
             <iframe className={styles.video_div} src="https://www.youtube.com/embed/tgbNymZ7vqY" />
             <h1>PRODUTO</h1>
             <div className={styles.div_infos_image}>
-              <Image src="/image1.png" width={1000} height={666} quality={100} className={styles.div_contato_imagem} />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <Image id="imageProduto" src="/image1.png" width={1000} height={666} quality={100} className={styles.div_contato_imagem +" "+ styles.show_on_scroll} />
+              <p id="textProduto" className={styles.div_info_descricao}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
             </div>
           </div>
           <div className={styles.div_vrgo} id="vrgo">
             <h1>VRGO</h1>
             <div className={styles.div_infos_image}>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-              <Image src="/image1.png" width={1000} height={666} quality={100} className={styles.div_contato_imagem} />
+              <p id="textVRGO" className={styles.div_info_descricao}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <Image id="imageVRGO" src="/image1.png" width={1000} height={666} quality={100} className={styles.div_contato_imagem +" "+ styles.show_on_scroll} />
             </div>
           </div>
           <div className={styles.div_contato} id="contato">
             <h1>CONTATO</h1>
             <div className={styles.div_infos_image}>
-              <Image src="/image1.png" width={1000} height={666} quality={100} className={styles.div_contato_imagem} />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <Image id="imageContato" src="/image1.png" width={1000} height={666} quality={100} className={styles.div_contato_imagem +" "+ styles.show_on_scroll} />
+              <p id="textContato" className={styles.div_info_descricao}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
             </div>
           </div>
         </div>

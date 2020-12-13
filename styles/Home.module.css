@@ -116,6 +116,45 @@
 
 .div_contato_imagem {
   border-radius: 6px;
+  opacity: 0;
+}
+
+.div_info_descricao {
+  opacity: 0;
+}
+
+.div_contato_imagem.is_visible, .div_info_descricao.is_visible {
+  animation: fadeInImage .6s;
+  animation-fill-mode: forwards;
+}
+
+.div_contato_imagem.is_visibleOposto, .div_info_descricao.is_visibleOposto {
+  animation: fadeInImageOposto .6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+    transform: translateX(-440px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+    z-index: 0;
+  }
+}
+
+@keyframes fadeInImageOposto {
+  from {
+    opacity: 0;
+    transform: translateX(440px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+    z-index: 0;
+  }
 }
 
 .div_produto, .div_vrgo, .div_contato, .div_divs_infos {
@@ -188,7 +227,7 @@
 }
 
 .footer_thirdy p {
-  margin-right: 10%;
+  margin-right: 5%;
 }
 
 .footer_first a:hover, .footer_sec a:hover {
@@ -222,6 +261,8 @@
 .footer_footer p {
   padding: 0 12px;
 }
+
+
 
 @media (max-width: 1100px) {
   .div_infos_image {
