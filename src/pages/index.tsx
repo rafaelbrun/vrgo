@@ -1,10 +1,10 @@
 import React from 'react';
-import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import tooltip from '../styles/Tooltip.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from 'next/image'
 import { text } from '@fortawesome/fontawesome-svg-core';
+import Head from 'next/head';
 
 export default function Home() {
   React.useEffect(() => {
@@ -62,17 +62,12 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet" />
-        <script src="https://kit.fontawesome.com/6c15b25352.js"></script>
         <title>VRGO - Realidade Virtual</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <header className={styles.header}>
         <div className={styles.header_nav_first}>
           <a href="#">
-            <h4>LOGO</h4>
+            <Image id="imageLogo.jpg" src="/assets/logo.jpg" width={40} height={40} quality={100} className={styles.imageLogo} />
           </a>
         </div>
         <div className={styles.header_nav_second}>
@@ -105,12 +100,12 @@ export default function Home() {
 
 
         <div className={styles.div_divs_infos} >
-        <iframe className={styles.video_div} src="https://www.youtube.com/embed/tgbNymZ7vqY" />
+          <iframe className={styles.video_div} src="https://www.youtube.com/embed/tgbNymZ7vqY" />
           <div className={styles.div_produto} id="produto">
-            
+
             <h1 >PRODUTO</h1>
             <div className={styles.div_infos_image}>
-              <Image id="imageProduto" src="/image1.png" width={1000} height={666} quality={100} className={styles.div_contato_imagem + " " + styles.show_on_scroll} />
+              <Image id="imageProduto" src="/assets/vrgo1.jpg" width={768} height={1024} quality={100} className={styles.div_contato_imagem + " " + styles.show_on_scroll} />
               <p id="textProduto" className={styles.div_info_descricao}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
             </div>
           </div>
@@ -132,7 +127,7 @@ export default function Home() {
 
         <div className={styles.footer}>
           <div className={styles.footer_first}>
-            <a href="#">LOGO</a>
+            <Image id="imageLogo.jpg" src="/assets/logo.jpg" width={80} height={80} quality={100} className={styles.imageLogo} />
           </div>
           <div className={styles.footer_sec}>
             <p>SOCIAL</p>

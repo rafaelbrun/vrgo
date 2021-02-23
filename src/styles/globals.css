@@ -3,7 +3,7 @@ body {
   font-family: -apple-system, Roboto Slab, BlinkMacSystemFont, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: #ffffff;
-  background: url('../public/assets/background.png') no-repeat;
+  background: url('../../public/assets/background.png') no-repeat;
   background-size: 100%;
 }
 
