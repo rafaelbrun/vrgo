@@ -342,7 +342,7 @@
   }
   .footer_footer {
     flex-direction: column;
-    height: 40px;
+    height: auto;
   }
   .footer_footer p {
     padding: 4px 0;
@@ -351,6 +351,6 @@
 
 @media (max-width: 315px){
   .footer {
-    height: 180px;
+    height: auto;
   }
 }
