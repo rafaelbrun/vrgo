@@ -273,6 +273,7 @@
   
   .div_infos_image p {
     margin: 3rem 0;
+    text-align: center;
   }
 }
 
@@ -287,10 +288,21 @@
 }
 
 @media (max-width: 550px) {
+  .div_divs_infos h1 {
+  font-size: 4rem;
+  padding: 1.2rem 0;
+  margin: 2.5rem 0;
+  }
+
+  .div_infos_image p {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
   .footer {
     display: flex;
     flex-direction: column;
-    height: 240px;
+    height: auto;
   }
   .footer_first, .footer_sec, .footer_thirdy {
     margin: 10px 0;
@@ -326,7 +338,7 @@
     height: 169px;
   }
   .footer {
-    height: 200px;
+    height: auto;
   }
   .footer_footer {
     flex-direction: column;
