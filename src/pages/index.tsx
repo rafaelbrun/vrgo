@@ -51,6 +51,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>VRGO - Realidade Virtual</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <header className={styles.header}>
         <div className={styles.header_nav_first}>

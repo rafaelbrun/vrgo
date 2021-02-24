@@ -10,7 +10,6 @@ export default class MyDocument extends Document {
                     <script src="https://kit.fontawesome.com/6c15b25352.js"></script>
                     
                     <link rel="icon" href="/favicon.ico" />
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 </Head>
                 <body>
                     <Main />
