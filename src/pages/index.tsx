@@ -22,27 +22,15 @@ export default function Home() {
         imageProduto.classList.add(styles.is_visible);
         textProduto.classList.add(styles.is_visibleOposto);
       }
-      else {
-        imageProduto.classList.remove(styles.is_visible);
-        textProduto.classList.remove(styles.is_visibleOposto);
-      }
 
       if (isElementInView(imageVRGO)) {
         imageVRGO.classList.add(styles.is_visibleOposto);
         textVRGO.classList.add(styles.is_visible);
       }
-      else {
-        imageVRGO.classList.remove(styles.is_visibleOposto);
-        textVRGO.classList.remove(styles.is_visible);
-      }
 
       if (isElementInView(imageContato)) {
         imageContato.classList.add(styles.is_visible);
         textContato.classList.add(styles.is_visibleOposto);
-      }
-      else {
-        imageContato.classList.remove(styles.is_visible);
-        textContato.classList.remove(styles.is_visibleOposto);
       }
 
       scroll(loop);
