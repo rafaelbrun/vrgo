@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/Home.module.css'
+import styles from '../styles/pages/Home.module.css'
 import tooltip from '../styles/Tooltip.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from 'next/image'
@@ -119,7 +119,7 @@ export default function Home() {
           <div className={styles.div_contato} id="contato">
             <h1>CONTATO</h1>
             <div className={styles.div_infos_image}>
-              <Image id="imageContato" src="/image1.png" width={1000} height={666} quality={100} className={styles.div_contato_imagem + " " + styles.show_on_scroll} />
+              <Image id="imageContato" src="/assets/image2.png" width={1000} height={666} quality={100} className={styles.div_contato_imagem + " " + styles.show_on_scroll} />
               <p id="textContato" className={styles.div_info_descricao}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
             </div>
           </div>
