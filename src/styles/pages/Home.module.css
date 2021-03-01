@@ -173,6 +173,10 @@
   margin: 0;
 }
 
+.topTitleContaier {
+  text-align: center;
+}
+
 .div_infos_image {
   display: flex;
   flex-direction: row;
